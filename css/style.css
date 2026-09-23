@@ -28,16 +28,20 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 
 /* ---------- App shell ---------- */
 #app-shell {
-  display: grid;
-  grid-template-columns: 260px 1fr;
+  display: flex;
   min-height: 100vh;
+  width: 100%;
 }
 #sidebar {
+  flex: 0 0 260px;
+  width: 260px;
+  max-width: 260px;
   background: var(--surface);
   border-right: 1px solid var(--border);
   padding: 1.1rem .9rem;
   position: sticky;
   top: 0;
+  align-self: flex-start;
   height: 100vh;
   overflow-y: auto;
 }
@@ -60,7 +64,9 @@ nav.side-nav { display: flex; flex-direction: column; gap: .1rem; }
 .nav-sub { margin-left: .6rem; border-left: 1px solid var(--border); padding-left: .5rem; }
 
 #main {
+  flex: 1 1 auto;
   min-width: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }

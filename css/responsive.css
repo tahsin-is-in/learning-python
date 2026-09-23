@@ -8,9 +8,10 @@
    permanent column — this covers phones, small tablets, and narrow/split
    desktop browser windows, so the main content always gets full width. */
 @media (max-width: 960px) {
-  #app-shell { display: block; }
+  #app-shell { display: block !important; }
   #sidebar {
-    position: fixed; left: 0; top: 0; bottom: 0; width: 78vw; max-width: 300px;
+    position: fixed !important; left: 0; top: 0; bottom: 0;
+    width: 78vw !important; max-width: 300px !important; flex-basis: auto !important;
     height: 100vh; transform: translateX(-100%); transition: transform .18s ease; z-index: 40;
     box-shadow: 2px 0 12px rgba(0,0,0,.25);
   }
@@ -18,7 +19,7 @@
   #menu-toggle { display: inline-flex; }
   #sidebar-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 35; }
   #sidebar-backdrop.open { display: block; }
-  #main { width: 100%; }
+  #main { width: 100% !important; }
   #content { padding: 1.1rem 1rem 3rem; max-width: 100%; }
   .search-btn { max-width: none; }
   #topbar { padding: .6rem .8rem; }
