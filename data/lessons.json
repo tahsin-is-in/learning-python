@@ -1,0 +1,262 @@
+[
+  {
+    "id": "what-is-programming",
+    "levelId": "foundations",
+    "title": "What Is Programming?",
+    "difficulty": "beginner",
+    "estimatedTime": "10 minutes",
+    "prerequisites": [],
+    "objectives": ["Explain what programming is in plain language", "Understand what a program actually is", "Understand why Python is a good first language"],
+    "quick": {
+      "definitions": [
+        "Programming: writing precise instructions that a computer carries out, step by step.",
+        "Program: a list of instructions saved so a computer can run them.",
+        "Source code: the text of a program, written in a programming language."
+      ],
+      "rules": ["Computers do exactly what you tell them — not what you meant."],
+      "cheat": "print(\"Hello, world!\")"
+    },
+    "deep": {
+      "intuition": "A computer is extremely fast but has zero judgment. It cannot guess what you want — it can only follow instructions exactly as written. Programming is the skill of turning a goal (\"sort this list of names\") into a precise sequence of steps a machine can execute without any ambiguity.",
+      "sections": [
+        { "heading": "A recipe analogy", "body": "A recipe tells you exact steps in a specific order: crack two eggs, whisk for 30 seconds, add flour. A program is the same idea, except the steps are things like 'add these two numbers' or 'if the number is bigger than 10, print a message'." },
+        { "heading": "Why Python?", "body": "Python reads almost like English, hides a lot of low-level detail other languages force you to manage, and is used everywhere: web backends, data science, automation, and scientific computing. It's an excellent language to think in before you ever touch a 'harder' language." }
+      ],
+      "examples": [
+        { "title": "Your first instruction", "code": "print(\"Hello, world!\")", "explain": "This line tells Python to do one thing: display the text Hello, world! on the screen. print(...) is a built-in instruction ('function') that displays whatever is inside the parentheses." }
+      ],
+      "realWorld": "Every app on your phone, every website, and most of the software running behind the scenes at a company is just layers and layers of instructions like this — just organized at a much larger scale."
+    },
+    "commonMistakes": [
+      { "bad": "print(Hello, world!)", "good": "print(\"Hello, world!\")", "why": "Text has to be wrapped in quotes. Without quotes, Python thinks Hello and world are variable names it should already know about, and it will crash with a NameError." }
+    ],
+    "practice": ["Write a single line of Python that prints your name.", "Write a line that prints two lines of text using two separate print() calls."],
+    "challenge": "Print a small ASCII box (using dashes and pipes) around the text 'PYTHON' using three print() calls.",
+    "miniProject": { "title": "Personal Greeter", "goal": "Print a 3-line personalized greeting: your name, your goal for learning Python, and today's plan." },
+    "quiz": [
+      { "q": "What does a computer do when it runs your program?", "options": ["Guesses what you probably meant", "Follows your instructions exactly, in order", "Fixes mistakes automatically", "Asks you clarifying questions"], "correctIndex": 1, "explain": "Computers have no judgment — they execute exactly what is written." },
+      { "q": "What is source code?", "options": ["A compiled binary file", "The text of a program written in a language like Python", "A type of computer chip", "A database of variables"], "correctIndex": 1, "explain": "Source code is simply the human-readable text of your program." }
+    ],
+    "prev": null, "next": "installing-python-and-repl"
+  },
+  {
+    "id": "installing-python-and-repl",
+    "levelId": "foundations",
+    "title": "Installing Python & the REPL",
+    "difficulty": "beginner",
+    "estimatedTime": "15 minutes",
+    "prerequisites": ["what-is-programming"],
+    "objectives": ["Know how Python code gets executed", "Understand what the REPL is", "Run a .py file from the terminal"],
+    "quick": {
+      "definitions": [
+        "Interpreter: a program that reads your Python code and runs it line by line.",
+        "REPL: Read-Eval-Print Loop — an interactive prompt where you type one line of Python and see the result immediately.",
+        "Script: a saved .py file containing many lines of Python, run all at once."
+      ],
+      "rules": ["Run a script with: python filename.py (or python3 filename.py on Mac/Linux)."],
+      "cheat": "python3 hello.py"
+    },
+    "deep": {
+      "intuition": "Some languages (like C) are compiled: translated entirely into machine code before running. Python is interpreted: an interpreter reads and executes your code one line at a time, which is part of why it feels fast to experiment with.",
+      "sections": [
+        { "heading": "The REPL", "body": "Typing `python` (or `python3`) with no filename opens an interactive shell. You type an expression, press Enter, and see the result immediately — perfect for quick experiments." },
+        { "heading": "Running a real file", "body": "For anything more than one line, write your code into a file ending in .py, then run it from a terminal with `python3 filename.py`. VS Code's integrated terminal is a convenient place to do this." }
+      ],
+      "examples": [
+        { "title": "REPL session", "code": ">>> 2 + 2\n4\n>>> print(\"hi\")\nhi", "explain": "Lines starting with >>> are what you type; the line below is what Python prints back." }
+      ],
+      "realWorld": "Professional developers use the REPL constantly to test a small idea before putting it into a real program — it's a scratchpad, not just a beginner tool."
+    },
+    "commonMistakes": [
+      { "bad": "Double-clicking hello.py in a file explorer", "good": "Running python3 hello.py from a terminal", "why": "Double-clicking often opens and instantly closes a window before you can see any output — a terminal keeps the output visible and shows errors." }
+    ],
+    "practice": ["Open a terminal and start the REPL. Compute 12 * 8.", "Create a file greet.py containing one print() statement and run it from the terminal."],
+    "challenge": "In the REPL, figure out what type(3.5) prints, without looking it up first.",
+    "miniProject": { "title": "Two-Line Script", "goal": "Create calc.py that prints the result of two different arithmetic expressions." },
+    "quiz": [
+      { "q": "What is the REPL mainly used for?", "options": ["Deploying to production", "Quick, interactive experiments with single lines of code", "Compiling C code", "Formatting CSS"], "correctIndex": 1, "explain": "The REPL is an interactive Read-Eval-Print Loop for immediate feedback." },
+      { "q": "How do you run a script named app.py from the terminal?", "options": ["run app.py", "python3 app.py", "open app.py", "execute(app.py)"], "correctIndex": 1, "explain": "python3 app.py hands the file to the Python interpreter." }
+    ],
+    "prev": "what-is-programming", "next": "variables-and-data-types"
+  },
+  {
+    "id": "variables-and-data-types",
+    "levelId": "basics",
+    "title": "Variables & Data Types",
+    "difficulty": "beginner",
+    "estimatedTime": "20 minutes",
+    "prerequisites": ["installing-python-and-repl"],
+    "objectives": ["Understand what a variable is", "Create and reassign variables", "Recognize Python's core data types"],
+    "quick": {
+      "definitions": [
+        "Variable: a name that refers to a value stored in memory.",
+        "int: a whole number, e.g. 21.",
+        "float: a decimal number, e.g. 3.14.",
+        "str: text, wrapped in quotes, e.g. \"hello\".",
+        "bool: True or False.",
+        "NoneType: the special value None, meaning 'nothing here'."
+      ],
+      "syntax": "name = value",
+      "rules": ["Variable names are case-sensitive and can't start with a digit.", "Python figures out the type automatically — you never declare it."],
+      "cheat": "age = 21\nheight = 1.75\nname = \"Ada\"\nis_student = True\nnothing = None\nprint(type(age))  # <class 'int'>"
+    },
+    "deep": {
+      "intuition": "Think of a variable as a labeled box. `age = 21` creates a box labeled age and puts the value 21 inside it. Later, `age = 22` doesn't create a new box — it swaps out what's inside the same box.",
+      "sections": [
+        { "heading": "Assignment", "body": "The = sign in Python isn't 'equals' the way it is in math — it's an instruction: 'take the value on the right, and store it under the name on the left.'" },
+        { "heading": "Dynamic typing", "body": "Python decides a variable's type based on the value you give it, and that type can change if you reassign it. This makes Python flexible, but it also means typos in names cause errors instead of being caught before running." },
+        { "heading": "Type conversion", "body": "You can convert between types explicitly: int(\"5\") turns the string \"5\" into the number 5, str(5) turns it back into text, and float(\"3.2\") turns text into a decimal number." }
+      ],
+      "examples": [
+        { "title": "Basic variables", "code": "age = 21\nheight = 1.75\nname = \"Ada\"\nis_student = True\n\nprint(age, height, name, is_student)", "explain": "Four variables, four different types, all created the same simple way." },
+        { "title": "Reassignment", "code": "score = 10\nscore = score + 5\nprint(score)  # 15", "explain": "score = score + 5 reads the current value (10), adds 5, and stores 15 back into the same variable." },
+        { "title": "Type conversion", "code": "age_text = \"21\"\nage_number = int(age_text)\nprint(age_number + 1)  # 22", "explain": "You can't add 1 to a string, so it must first be converted to an int." }
+      ],
+      "realWorld": "Every program that remembers anything — a game score, a user's name, a shopping cart total — is doing it with variables."
+    },
+    "commonMistakes": [
+      { "bad": "1st_place = \"gold\"", "good": "first_place = \"gold\"", "why": "Variable names can't start with a digit." },
+      { "bad": "age = \"21\"\nprint(age + 1)", "good": "age = 21\nprint(age + 1)", "why": "\"21\" is text, not a number — Python can't add a number to text without an explicit conversion, and will raise a TypeError." }
+    ],
+    "practice": [
+      "Create variables for your name, age, and favorite number, then print all three.",
+      "Create a variable price = 9.99 and print its type.",
+      "Convert the string \"100\" into an integer and add 1 to it."
+    ],
+    "challenge": "Write code that swaps the values of two variables a and b without using a third temporary variable (hint: a, b = b, a).",
+    "miniProject": { "title": "Profile Card", "goal": "Store your name, age, city, and whether you're currently a student in four variables, then print a short formatted profile using them." },
+    "quiz": [
+      { "q": "What does age = 21 do?", "options": ["Compares age to 21", "Creates a variable named age and stores 21 in it", "Deletes the variable age", "Prints 21"], "correctIndex": 1, "explain": "= is assignment: store the right-hand value under the left-hand name." },
+      { "q": "What type is the value True?", "options": ["str", "int", "bool", "NoneType"], "correctIndex": 2, "explain": "True and False are of type bool." },
+      { "q": "What will int(\"5\") + 1 evaluate to?", "options": ["\"51\"", "6", "TypeError", "\"6\""], "correctIndex": 1, "explain": "int(\"5\") converts the string to the number 5, so 5 + 1 = 6." }
+    ],
+    "prev": "installing-python-and-repl", "next": "operators"
+  },
+  {
+    "id": "operators",
+    "levelId": "basics",
+    "title": "Operators",
+    "difficulty": "beginner",
+    "estimatedTime": "20 minutes",
+    "prerequisites": ["variables-and-data-types"],
+    "objectives": ["Use arithmetic, comparison and logical operators", "Understand operator precedence"],
+    "quick": {
+      "definitions": [
+        "Arithmetic operators: + - * / // % ** for math.",
+        "Comparison operators: == != > < >= <= — produce True/False.",
+        "Logical operators: and, or, not — combine True/False values."
+      ],
+      "syntax": "result = a + b\nis_equal = a == b\nboth = a > 0 and b > 0",
+      "rules": ["== checks equality; = assigns a value. Mixing these up is the most common beginner bug.", "// is integer (floor) division; / always returns a float."],
+      "cheat": "7 // 2   # 3\n7 % 2    # 1\n2 ** 3   # 8\n5 == 5   # True\nnot True # False"
+    },
+    "deep": {
+      "intuition": "Operators are the verbs of Python — they take one or two values and produce a new value. Arithmetic operators produce numbers; comparison operators produce True or False; logical operators combine True/False values.",
+      "sections": [
+        { "heading": "Arithmetic", "body": "+ - * / work as expected. // rounds division down to a whole number (floor division), % gives the remainder after division (the 'modulo'), and ** raises to a power." },
+        { "heading": "Comparison vs assignment", "body": "= assigns. == compares. `if x = 5:` is not valid Python and will raise a SyntaxError — Python requires `if x == 5:`." },
+        { "heading": "Logical operators & precedence", "body": "`and` requires both sides to be True; `or` requires at least one; `not` flips a boolean. Python evaluates ** before */ before +-, and comparisons before and/or — use parentheses whenever you're unsure." }
+      ],
+      "examples": [
+        { "title": "Modulo for even/odd", "code": "number = 7\nprint(number % 2)  # 1 -> odd", "explain": "% gives the remainder. A remainder of 0 when dividing by 2 means the number is even." },
+        { "title": "Combining comparisons", "code": "age = 25\nhas_ticket = True\ncan_enter = age >= 18 and has_ticket\nprint(can_enter)  # True", "explain": "Both conditions must be True for can_enter to be True." }
+      ],
+      "realWorld": "Modulo (%) is the standard trick for 'every Nth item' logic — for example, applying a discount to every 3rd item in a cart, or checking if a year is a leap year."
+    },
+    "commonMistakes": [
+      { "bad": "if x = 5:", "good": "if x == 5:", "why": "= assigns a value; == compares two values. Using = inside a condition is a syntax error in Python." },
+      { "bad": "print(7 / 2)  # expecting 3", "good": "print(7 // 2)  # 3", "why": "/ always returns a float (3.5). Use // for whole-number ('floor') division." }
+    ],
+    "practice": ["Write an expression that checks whether a number is divisible by 5.", "Write a condition that is True only when a person is an adult (age >= 18) AND has a valid ID."],
+    "challenge": "Without running it, predict the output of `print(2 + 3 * 4 ** 2)` — then verify in the REPL.",
+    "miniProject": { "title": "Tip Calculator", "goal": "Given a bill amount and a tip percentage as variables, calculate and print the tip amount and the total." },
+    "quiz": [
+      { "q": "Which operator checks equality?", "options": ["=", "==", "!=", "<>"], "correctIndex": 1, "explain": "== compares two values; = assigns a value." },
+      { "q": "What does 9 % 4 evaluate to?", "options": ["2.25", "2", "1", "36"], "correctIndex": 2, "explain": "9 divided by 4 is 2 remainder 1, so 9 % 4 is 1." },
+      { "q": "What does `True and False` evaluate to?", "options": ["True", "False", "None", "Error"], "correctIndex": 1, "explain": "and requires both sides to be True." }
+    ],
+    "prev": "variables-and-data-types", "next": "conditionals"
+  },
+  {
+    "id": "conditionals",
+    "levelId": "basics",
+    "title": "Conditional Logic (if / elif / else)",
+    "difficulty": "beginner",
+    "estimatedTime": "20 minutes",
+    "prerequisites": ["operators"],
+    "objectives": ["Write branching logic with if/elif/else", "Understand how indentation defines blocks"],
+    "quick": {
+      "definitions": ["if: run a block only when a condition is True.", "elif: check another condition if the previous ones were False.", "else: run when none of the above conditions were True."],
+      "syntax": "if condition:\n    statement\nelif other_condition:\n    statement\nelse:\n    statement",
+      "rules": ["Python uses indentation (not braces) to define a block — 4 spaces is the standard.", "Conditions are checked top to bottom; only the first True branch runs."],
+      "cheat": "if score >= 90:\n    grade = \"A\"\nelif score >= 80:\n    grade = \"B\"\nelse:\n    grade = \"C\""
+    },
+    "deep": {
+      "intuition": "A conditional is a fork in the road: 'if this is true, go this way; otherwise, go that way.' Every program that reacts differently to different situations relies on this.",
+      "sections": [
+        { "heading": "Indentation is meaningful", "body": "In many languages, curly braces {} mark a block of code. Python instead uses indentation itself — consistently 4 spaces per level. Mixing tabs and spaces, or inconsistent indentation, causes an IndentationError." },
+        { "heading": "elif chains", "body": "You can chain as many elif branches as you need. Python checks them top-to-bottom and stops at the first True condition — order matters when conditions overlap." },
+        { "heading": "Conditional expressions", "body": "For simple cases, a one-line conditional expression works: `label = \"adult\" if age >= 18 else \"minor\"`." }
+      ],
+      "examples": [
+        { "title": "Simple if/else", "code": "age = 20\nif age >= 18:\n    print(\"Adult\")\nelse:\n    print(\"Minor\")", "explain": "Only one branch runs, based on the condition." },
+        { "title": "elif chain", "code": "temp = 15\nif temp > 30:\n    print(\"Hot\")\nelif temp > 15:\n    print(\"Warm\")\nelif temp > 0:\n    print(\"Cool\")\nelse:\n    print(\"Freezing\")", "explain": "temp = 15 fails `> 15`, so it falls to the next elif, `> 0`, which is True -> prints Cool." }
+      ],
+      "realWorld": "Login checks, form validation, game rules, and pricing tiers are all conditional logic under the hood."
+    },
+    "commonMistakes": [
+      { "bad": "if age >= 18:\nprint(\"Adult\")", "good": "if age >= 18:\n    print(\"Adult\")", "why": "The body of an if must be indented — without it, Python raises an IndentationError." },
+      { "bad": "if x == 1:\n    ...\nif x == 2:\n    ...", "good": "if x == 1:\n    ...\nelif x == 2:\n    ...", "why": "Using separate if statements checks both every time; elif correctly treats them as mutually exclusive alternatives." }
+    ],
+    "practice": ["Write a program that prints 'Positive', 'Negative', or 'Zero' based on a number variable.", "Write a grading program that converts a numeric score into a letter grade A–F."],
+    "challenge": "Write a condition that determines if a year is a leap year (divisible by 4, but not by 100 unless also divisible by 400).",
+    "miniProject": { "title": "Simple Login Gate", "goal": "Given a username and password stored in variables, print 'Access granted' only if both match expected values, otherwise print a helpful rejection message." },
+    "quiz": [
+      { "q": "What defines a code block in Python?", "options": ["Curly braces {}", "Semicolons", "Indentation", "Parentheses"], "correctIndex": 2, "explain": "Python uses consistent indentation instead of braces." },
+      { "q": "In an if/elif/else chain, how many branches can run?", "options": ["All matching branches", "Exactly the first branch whose condition is True", "Always the else branch", "None unless explicitly called"], "correctIndex": 1, "explain": "Python stops at the first True condition in the chain." }
+    ],
+    "prev": "operators", "next": "loops"
+  },
+  {
+    "id": "loops",
+    "levelId": "basics",
+    "title": "Loops (for & while)",
+    "difficulty": "beginner",
+    "estimatedTime": "25 minutes",
+    "prerequisites": ["conditionals"],
+    "objectives": ["Use for loops with range() and sequences", "Use while loops for condition-based repetition", "Use break, continue and pass correctly"],
+    "quick": {
+      "definitions": ["for loop: repeats once per item in a sequence.", "while loop: repeats as long as a condition stays True.", "break: exits a loop immediately.", "continue: skips to the next iteration.", "pass: does nothing — a placeholder."],
+      "syntax": "for item in sequence:\n    statement\n\nwhile condition:\n    statement",
+      "rules": ["range(5) produces 0,1,2,3,4 — 5 numbers, not including 5.", "A while loop needs something inside it that eventually makes the condition False, or it never ends."],
+      "cheat": "for i in range(5):\n    print(i)\n\nn = 3\nwhile n > 0:\n    print(n)\n    n -= 1"
+    },
+    "deep": {
+      "intuition": "Loops let you repeat work without copy-pasting code. Use a for loop when you know what you're iterating over (a list, a range of numbers); use a while loop when you're repeating until some condition changes.",
+      "sections": [
+        { "heading": "for and range()", "body": "range(start, stop, step) generates a sequence of numbers. range(5) is shorthand for range(0, 5, 1). The stop value is never included." },
+        { "heading": "while and infinite loops", "body": "A while loop repeats as long as its condition is True. Forgetting to update the variable that controls the condition (e.g. forgetting n -= 1) creates an infinite loop that never stops." },
+        { "heading": "break, continue, pass", "body": "break exits the loop entirely. continue skips the rest of the current iteration and jumps to the next one. pass does nothing — useful as a placeholder while you're still writing code." }
+      ],
+      "examples": [
+        { "title": "for over a range", "code": "for i in range(5):\n    print(i)\n# 0 1 2 3 4", "explain": "Loops 5 times, with i taking each value from 0 up to (not including) 5." },
+        { "title": "while loop countdown", "code": "n = 3\nwhile n > 0:\n    print(n)\n    n -= 1\nprint(\"Liftoff!\")", "explain": "Repeats as long as n > 0, decreasing n each time so the loop eventually ends." },
+        { "title": "break and continue", "code": "for i in range(10):\n    if i == 3:\n        continue\n    if i == 6:\n        break\n    print(i)\n# 0 1 2 4 5", "explain": "3 is skipped by continue; the loop stops entirely once i reaches 6, via break." }
+      ],
+      "realWorld": "Every time an app processes a list of items — emails in an inbox, products in a cart, rows in a spreadsheet — it's looping over them."
+    },
+    "commonMistakes": [
+      { "bad": "n = 3\nwhile n > 0:\n    print(n)", "good": "n = 3\nwhile n > 0:\n    print(n)\n    n -= 1", "why": "Without updating n, the condition n > 0 is always True — this is an infinite loop that never stops." },
+      { "bad": "for i in range(1, 5):\n    print(i)\n# expecting 1 2 3 4 5", "good": "for i in range(1, 6):\n    print(i)", "why": "range()'s stop value is exclusive — range(1, 5) stops before 5." }
+    ],
+    "practice": ["Print all numbers from 1 to 10 using a for loop.", "Use a while loop to print numbers from 10 down to 1.", "Use a for loop with continue to print only the even numbers from 0 to 20."],
+    "challenge": "Write a loop that prints the multiplication table (1x to 10x) for the number 7.",
+    "miniProject": { "title": "Number Guessing Game", "goal": "Store a secret number in a variable. Use a while loop that keeps 'guessing' (simulated with a list of guesses) until it matches, printing 'Too high'/'Too low'/'Correct!' each time." },
+    "quiz": [
+      { "q": "What does range(5) produce?", "options": ["1,2,3,4,5", "0,1,2,3,4", "0,1,2,3,4,5", "5"], "correctIndex": 1, "explain": "range(5) starts at 0 and stops before 5, giving 5 values total." },
+      { "q": "What is most likely to cause an infinite while loop?", "options": ["Using break", "Forgetting to update the condition variable", "Using range()", "Using continue"], "correctIndex": 1, "explain": "If nothing inside the loop changes the condition, it stays True forever." },
+      { "q": "What does continue do?", "options": ["Exits the loop", "Skips to the next iteration", "Ends the program", "Does nothing"], "correctIndex": 1, "explain": "continue skips the rest of the current iteration's body and moves to the next one." }
+    ],
+    "prev": "conditionals", "next": null
+  }
+]

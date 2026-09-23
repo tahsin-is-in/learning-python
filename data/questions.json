@@ -1,0 +1,41 @@
+[
+  { "id": "q1", "type": "mcq", "topic": "variables-and-data-types", "difficulty": "beginner",
+    "prompt": "What is the type of the value 3.14?",
+    "options": ["int", "float", "str", "bool"], "correctIndex": 1,
+    "hint": "It has a decimal point.", "explain": "Any number written with a decimal point is a float in Python." },
+
+  { "id": "q2", "type": "predict-output", "topic": "operators", "difficulty": "beginner",
+    "prompt": "What does this print?\n\nprint(10 // 3)",
+    "options": ["3.33", "3", "1", "3.0"], "correctIndex": 1,
+    "hint": "// discards the remainder.", "explain": "// is floor division — it drops the remainder entirely, giving 3." },
+
+  { "id": "q3", "type": "find-error", "topic": "conditionals", "difficulty": "beginner",
+    "prompt": "What is wrong with this code?\n\nif age = 18:\n    print(\"Adult\")",
+    "options": ["Nothing, it's correct", "Should use == instead of =", "Missing a colon", "Missing parentheses"], "correctIndex": 1,
+    "hint": "= assigns, it doesn't compare.", "explain": "Comparisons require ==. A single = inside a condition is a SyntaxError." },
+
+  { "id": "q4", "type": "mcq", "topic": "loops", "difficulty": "beginner",
+    "prompt": "How many times does this loop run?\n\nfor i in range(2, 8, 2):\n    print(i)",
+    "options": ["3", "4", "6", "8"], "correctIndex": 0,
+    "hint": "range(2, 8, 2) steps by 2: 2, 4, 6.", "explain": "It produces 2, 4, 6 — three values — because the stop value 8 is excluded." },
+
+  { "id": "q5", "type": "fill-blank", "topic": "operators", "difficulty": "beginner",
+    "prompt": "Fill in the blank so this checks equality: if score ___ 100:",
+    "options": ["=", "==", "===", "eq"], "correctIndex": 1,
+    "hint": "Equality checks always use a double symbol in Python.", "explain": "== is Python's equality comparison operator." },
+
+  { "id": "q6", "type": "predict-output", "topic": "loops", "difficulty": "intermediate",
+    "prompt": "What does this print?\n\nfor i in range(5):\n    if i == 2:\n        continue\n    print(i)",
+    "options": ["0 1 2 3 4", "0 1 3 4", "0 1 2", "1 2 3 4"], "correctIndex": 1,
+    "hint": "continue skips just the current iteration, not the rest of the loop.", "explain": "When i == 2, continue skips only the print for that iteration; the loop still finishes 0,1,3,4." },
+
+  { "id": "q7", "type": "mcq", "topic": "variables-and-data-types", "difficulty": "beginner",
+    "prompt": "Which of these is a valid variable name?",
+    "options": ["2nd_place", "my-name", "my_name", "class"], "correctIndex": 2,
+    "hint": "Hyphens aren't allowed, names can't start with a digit, and 'class' is a reserved keyword.", "explain": "my_name follows the rules: starts with a letter/underscore, uses only letters/digits/underscores, and isn't a reserved word." },
+
+  { "id": "q8", "type": "debug", "topic": "loops", "difficulty": "intermediate",
+    "prompt": "This code should print 1 to 5 but never stops. What's the bug?\n\nn = 1\nwhile n <= 5:\n    print(n)",
+    "options": ["The condition is wrong", "n is never incremented inside the loop", "range() should be used instead", "print() is misspelled"], "correctIndex": 1,
+    "hint": "Check what changes n's value inside the loop body.", "explain": "Nothing updates n, so n <= 5 is always True — an infinite loop. Add n += 1 inside the loop." }
+]

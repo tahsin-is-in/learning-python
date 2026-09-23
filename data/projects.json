@@ -1,0 +1,41 @@
+[
+  {
+    "id": "calculator", "tier": "beginner", "title": "Command-Line Calculator",
+    "requires": ["variables-and-data-types", "operators", "conditionals"],
+    "goal": "Build a calculator that reads two numbers and an operator from the user, then prints the result.",
+    "requirements": ["Ask the user for two numbers and an operator (+, -, *, /)", "Perform the correct calculation based on the operator", "Handle division by zero without crashing"],
+    "concepts": ["input()", "type conversion", "if/elif/else", "basic error handling"],
+    "architecture": "Read three inputs -> convert the numbers with float() -> use if/elif to pick the operation -> print the result.",
+    "milestones": ["Read and print the two numbers back to confirm input works", "Handle the + and - cases", "Add * and /", "Guard against division by zero"],
+    "hints": ["input() always returns a string — convert it with float() before doing math.", "Check for the divide-by-zero case before performing the division."],
+    "commonProblems": ["Forgetting to convert input() results to numbers, causing a TypeError when adding them.", "Not handling an unrecognized operator symbol."],
+    "testingChecklist": ["3 + 4 gives 7", "10 / 0 shows a friendly message instead of crashing", "5 * 3 gives 15"],
+    "extensions": ["Support ** for exponents", "Loop so the user can do multiple calculations without restarting the program"]
+  },
+  {
+    "id": "number-guessing-game", "tier": "beginner", "title": "Number Guessing Game",
+    "requires": ["loops", "conditionals"],
+    "goal": "The computer picks a secret number; the player guesses until they get it right, receiving 'too high'/'too low' feedback.",
+    "requirements": ["Generate a random secret number (random.randint)", "Loop, asking for guesses", "Give higher/lower feedback", "Count and report the number of guesses when the player wins"],
+    "concepts": ["random module", "while loop", "if/elif/else", "input()"],
+    "architecture": "Import random -> generate a secret number -> loop reading a guess each time -> compare and give feedback -> break on a correct guess.",
+    "milestones": ["Hardcode the secret number and get the win condition working", "Add higher/lower feedback", "Switch to random.randint", "Track and display the guess count"],
+    "hints": ["random.randint(1, 100) gives a random whole number from 1 to 100 inclusive.", "Convert the guess to int() before comparing it to the secret number."],
+    "commonProblems": ["Comparing a string guess to an int secret number without converting first.", "Loop never ending because the win condition doesn't break out."],
+    "testingChecklist": ["Guessing correctly on the first try ends the game immediately", "Guesses outside 1-100 are still handled gracefully"],
+    "extensions": ["Limit the player to 10 attempts", "Add a difficulty setting that changes the number range"]
+  },
+  {
+    "id": "expense-tracker", "tier": "beginner", "title": "Simple Expense Tracker",
+    "requires": ["loops", "data-structures"],
+    "goal": "Track a list of expenses in memory and print a running total and category breakdown.",
+    "requirements": ["Store each expense as a dictionary with amount and category", "Support adding a new expense", "Print the total spent", "Print totals grouped by category"],
+    "concepts": ["lists", "dictionaries", "loops", "f-strings"],
+    "architecture": "Keep a list of expense dictionaries -> loop to add entries -> loop again to sum totals overall and per category.",
+    "milestones": ["Store and print a single expense", "Support multiple expenses in a list", "Calculate the overall total", "Calculate totals per category using a dictionary"],
+    "hints": ["A dictionary like {\"amount\": 12.5, \"category\": \"food\"} is a clean way to represent one expense.", "Use dict.get(key, 0) to safely add to a running per-category total."],
+    "commonProblems": ["Forgetting that dictionary keys are case-sensitive when grouping categories.", "Not initializing a category's running total before adding to it."],
+    "testingChecklist": ["Adding three expenses in the same category sums correctly", "An empty expense list reports a total of 0 without crashing"],
+    "extensions": ["Save expenses to a JSON file so they persist between runs", "Add a monthly budget and warn when it's exceeded"]
+  }
+]

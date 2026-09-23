@@ -1,0 +1,20 @@
+@media (max-width: 900px) {
+  .playground-grid { grid-template-columns: 1fr; height: auto; }
+  #pg-editor, #pg-output { height: 260px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 780px) {
+  #app-shell { grid-template-columns: 1fr; }
+  #sidebar {
+    position: fixed; left: 0; top: 0; bottom: 0; width: 78vw; max-width: 300px;
+    transform: translateX(-100%); transition: transform .18s ease; z-index: 40;
+    box-shadow: 2px 0 12px rgba(0,0,0,.15);
+  }
+  #sidebar.open { transform: translateX(0); }
+  #menu-toggle { display: inline-flex; }
+  #sidebar-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 35; }
+  #sidebar-backdrop.open { display: block; }
+  #content { padding: 1.2rem 1rem 3rem; }
+  .search-btn { max-width: none; }
+}

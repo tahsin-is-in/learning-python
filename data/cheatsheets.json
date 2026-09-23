@@ -1,0 +1,58 @@
+[
+  { "id": "syntax", "title": "Python Syntax Basics", "items": [
+    { "label": "Comment", "code": "# this is a comment" },
+    { "label": "Variable", "code": "x = 5" },
+    { "label": "Print", "code": "print(\"hello\")" },
+    { "label": "f-string", "code": "f\"Value is {x}\"" },
+    { "label": "Multi-line string", "code": "\"\"\"line1\nline2\"\"\"" }
+  ]},
+  { "id": "data-types", "title": "Data Types", "items": [
+    { "label": "Integer", "code": "age = 21" },
+    { "label": "Float", "code": "pi = 3.14" },
+    { "label": "String", "code": "name = \"Ada\"" },
+    { "label": "Boolean", "code": "ok = True" },
+    { "label": "None", "code": "value = None" },
+    { "label": "Type check", "code": "type(x)" },
+    { "label": "Convert", "code": "int(\"5\"); str(5); float(\"3.2\")" }
+  ]},
+  { "id": "operators", "title": "Operators", "items": [
+    { "label": "Arithmetic", "code": "+ - * / // % **" },
+    { "label": "Comparison", "code": "== != > < >= <=" },
+    { "label": "Logical", "code": "and or not" },
+    { "label": "Membership", "code": "in, not in" },
+    { "label": "Identity", "code": "is, is not" }
+  ]},
+  { "id": "control-flow", "title": "Control Flow", "items": [
+    { "label": "if/elif/else", "code": "if x > 0:\n    ...\nelif x == 0:\n    ...\nelse:\n    ..." },
+    { "label": "for loop", "code": "for i in range(5):\n    ..." },
+    { "label": "while loop", "code": "while cond:\n    ..." },
+    { "label": "break/continue", "code": "break\ncontinue" }
+  ]},
+  { "id": "lists", "title": "Lists", "items": [
+    { "label": "Create", "code": "nums = [1, 2, 3]" },
+    { "label": "Index / slice", "code": "nums[0]; nums[1:3]" },
+    { "label": "Add", "code": "nums.append(4)" },
+    { "label": "Remove", "code": "nums.remove(2)" },
+    { "label": "Sort", "code": "nums.sort()" },
+    { "label": "Comprehension", "code": "[n*n for n in nums]" }
+  ]},
+  { "id": "dicts", "title": "Dictionaries", "items": [
+    { "label": "Create", "code": "d = {\"a\": 1}" },
+    { "label": "Access", "code": "d[\"a\"]" },
+    { "label": "Safe access", "code": "d.get(\"a\", 0)" },
+    { "label": "Update", "code": "d[\"b\"] = 2" },
+    { "label": "Iterate", "code": "for k, v in d.items(): ..." }
+  ]},
+  { "id": "functions", "title": "Functions", "items": [
+    { "label": "Define", "code": "def add(a, b):\n    return a + b" },
+    { "label": "Default arg", "code": "def greet(name=\"there\"): ..." },
+    { "label": "*args / **kwargs", "code": "def f(*args, **kwargs): ..." },
+    { "label": "Lambda", "code": "square = lambda x: x*x" }
+  ]},
+  { "id": "git", "title": "Git Basics", "items": [
+    { "label": "Init", "code": "git init" },
+    { "label": "Stage & commit", "code": "git add .\ngit commit -m \"message\"" },
+    { "label": "Branch", "code": "git checkout -b feature" },
+    { "label": "Push", "code": "git push origin main" }
+  ]}
+]

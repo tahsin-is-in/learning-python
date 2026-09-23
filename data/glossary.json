@@ -1,0 +1,23 @@
+[
+  { "term": "Argument", "definition": "A value you pass into a function when calling it.", "example": "In print(\"hi\"), \"hi\" is the argument.", "related": ["functions"] },
+  { "term": "Attribute", "definition": "A piece of data stored on an object, accessed with dot notation.", "example": "person.name accesses the name attribute of person.", "related": ["oop"] },
+  { "term": "Boolean", "definition": "A value that is either True or False.", "example": "is_valid = True", "related": ["basics"] },
+  { "term": "Class", "definition": "A blueprint for creating objects that share structure and behavior.", "example": "class Dog: ...", "related": ["oop"] },
+  { "term": "Decorator", "definition": "A function that wraps another function to add behavior without changing its code.", "example": "@staticmethod", "related": ["advanced"] },
+  { "term": "Dictionary", "definition": "A collection of key-value pairs.", "example": "person = {\"name\": \"Ada\"}", "related": ["data-structures"] },
+  { "term": "Exception", "definition": "An error that occurs during program execution and can be caught with try/except.", "example": "ZeroDivisionError", "related": ["exceptions"] },
+  { "term": "Function", "definition": "A reusable, named block of code that can take inputs and return a result.", "example": "def greet(name): return f\"Hi {name}\"", "related": ["functions"] },
+  { "term": "Generator", "definition": "A function that produces a sequence of values lazily, one at a time, using yield.", "example": "def counter():\n    yield 1\n    yield 2", "related": ["advanced"] },
+  { "term": "Iterable", "definition": "Anything you can loop over with a for loop, like a list or a string.", "example": "for c in \"abc\": ...", "related": ["data-structures"] },
+  { "term": "Iterator", "definition": "An object that produces the next value in a sequence, one at a time, until exhausted.", "example": "iter([1,2,3])", "related": ["advanced"] },
+  { "term": "Lambda", "definition": "A small, unnamed function defined in a single expression.", "example": "square = lambda x: x * x", "related": ["functions"] },
+  { "term": "Method", "definition": "A function that belongs to an object and usually acts on its data.", "example": "\"hi\".upper()", "related": ["oop"] },
+  { "term": "Module", "definition": "A single Python file containing code that can be imported elsewhere.", "example": "import math", "related": ["modules"] },
+  { "term": "Object", "definition": "A specific instance created from a class, with its own data.", "example": "my_dog = Dog(\"Rex\")", "related": ["oop"] },
+  { "term": "Package", "definition": "A folder of modules, marked with an __init__.py file (or implicitly in modern Python).", "example": "import numpy", "related": ["modules"] },
+  { "term": "Parameter", "definition": "A named placeholder in a function definition that receives an argument.", "example": "def greet(name): — name is the parameter.", "related": ["functions"] },
+  { "term": "Recursion", "definition": "A function that calls itself to solve a smaller version of the same problem.", "example": "def factorial(n): return 1 if n == 0 else n * factorial(n-1)", "related": ["functions", "algorithms"] },
+  { "term": "Scope", "definition": "The region of code where a variable name is accessible.", "example": "A variable created inside a function isn't visible outside it.", "related": ["functions"] },
+  { "term": "Tuple", "definition": "An ordered, immutable collection of values.", "example": "point = (3, 4)", "related": ["data-structures"] },
+  { "term": "Variable", "definition": "A name that refers to a value stored in memory.", "example": "age = 21", "related": ["basics"] }
+]
