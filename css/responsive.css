@@ -4,17 +4,28 @@
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 780px) {
-  #app-shell { grid-template-columns: 1fr; }
+/* Below this width the sidebar becomes an off-canvas drawer instead of a
+   permanent column — this covers phones, small tablets, and narrow/split
+   desktop browser windows, so the main content always gets full width. */
+@media (max-width: 960px) {
+  #app-shell { display: block; }
   #sidebar {
     position: fixed; left: 0; top: 0; bottom: 0; width: 78vw; max-width: 300px;
-    transform: translateX(-100%); transition: transform .18s ease; z-index: 40;
-    box-shadow: 2px 0 12px rgba(0,0,0,.15);
+    height: 100vh; transform: translateX(-100%); transition: transform .18s ease; z-index: 40;
+    box-shadow: 2px 0 12px rgba(0,0,0,.25);
   }
   #sidebar.open { transform: translateX(0); }
   #menu-toggle { display: inline-flex; }
-  #sidebar-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 35; }
+  #sidebar-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 35; }
   #sidebar-backdrop.open { display: block; }
-  #content { padding: 1.2rem 1rem 3rem; }
+  #main { width: 100%; }
+  #content { padding: 1.1rem 1rem 3rem; max-width: 100%; }
   .search-btn { max-width: none; }
+  #topbar { padding: .6rem .8rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .stat .num { font-size: 1.35rem; }
 }
